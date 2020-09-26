@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update  #每次启动项目不会重新创建数据库
+    show-sql: true  #会将sql语句打印在日志、控制台， 默认为false
+
+logging:
+  level:
+    root: info
+    com.swh: debug
+  file:
+    name: log/blog-dev.log  #文件大小默认10mb
+
+server:
+  port: 8080  #开发环境的端口号
+
+
+
+
